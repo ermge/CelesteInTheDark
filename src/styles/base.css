@@ -18,6 +18,7 @@
     --primary-3: #e0f4ff;
     --tonal-1: #202426;
     --tonal-2: #4b4e50;
+    --error: #CF6679;
     --normal-margin: 1rem;
     --normal-padding: 1rem;
     --slight-margin: 0.5rem;
@@ -178,4 +179,23 @@ section > p {
 
 main a {
     color: var(--primary-1);
+}
+
+chapter-nav > nav {
+    padding: var(--slight-padding);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+chapter-nav > h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-3) ;
+}
+
+wip-text {
+    font-family: var(--heading-font);
+    font-size: var(--size-4);
+    color: var(--error);
+    justify-self: center;
+    text-align: center;
 }
