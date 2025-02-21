@@ -25,6 +25,7 @@
     --heading-font: Renogare, Arial, Helvetica, sans-serif;
     --reading-font: Merriweather, 'Times New Roman', Times, serif;
     --section-radius: 12px;
+    --normal-line-height: 2rem;
 }
 
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -75,7 +76,7 @@ header > nav {
     width: 100%;
     max-width: 100%;
     padding: var(--normal-padding);
-    padding-top: 0;
+    padding-top: 0; 
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -110,6 +111,7 @@ main {
     margin-inline: auto;
     display: flex;
     flex-flow: column wrap;
+    line-height: var(--normal-line-height);
 }
 
 hgroup {
@@ -122,6 +124,8 @@ hgroup {
 }
 
 h1 {
+    padding-top: var(--normal-padding);
+    padding-bottom: var(--normal-padding);
     color: var(--primary-3);
     font-family: var(--heading-font);
     font-size: var(--size-4);
