@@ -108,3 +108,30 @@ a:hover{
     color: var(--primary-1);
     border-radius: var(--section-radius);
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 0.3rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 0.3rem;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        gap: 0.3rem;
+    }
+}

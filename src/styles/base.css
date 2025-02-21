@@ -26,7 +26,7 @@
     --large-margin: 2rem;
     --heading-font: Renogare, Arial, Helvetica, sans-serif;
     --reading-font: Merriweather, 'Times New Roman', Times, serif;
-    --section-radius: 12px;
+    --normal-radius: 12px;
     --normal-line-height: 2rem;
 }
 
@@ -64,6 +64,7 @@ body {
     font-family: var(--reading-font);
     font-size: var(--size-0);
     color: #f1f1f1;
+    text-wrap-style: pretty;
 }
 
 main {
@@ -78,15 +79,19 @@ main {
 hgroup {
     background-color: var(--surface-1);
     margin-bottom: var(--normal-margin);
-    padding: var(--normal-padding);
-    padding-top: 0;
+    padding: var(--slight-padding);
     border: white 2px solid;
-    border-radius: var(--section-radius);
+    border-radius: var(--normal-radius);
+}
+
+hgroup > p {
+    margin-inline: auto;
+    padding: var(--normal-padding);
 }
 
 h1 {
-    padding-top: var(--normal-padding);
-    padding-bottom: var(--normal-padding);
+    padding: var(--normal-padding);
+    padding-bottom: 0;
     color: var(--primary-3);
     font-family: var(--heading-font);
     font-size: var(--size-4);
@@ -101,7 +106,7 @@ section {
     flex-flow: column wrap;
     align-items: center;
     border: var(--surface-3) 2px solid;
-    border-radius: var(--section-radius);
+    border-radius: var(--normal-radius);
 }
 
 video {
@@ -113,7 +118,7 @@ video {
     object-fit: contain;
     object-position: 50% 50%;
     border: var(--surface-2) 1px solid;
-    border-radius: var(--section-radius);
+    border-radius: var(--normal-radius);
 }
 
 h2 {
@@ -134,7 +139,7 @@ h3 {
 section > p {
     width: 90%;
     max-width: 100%;
-    padding-bottom: var(--normal-padding);
+    padding: var(--normal-padding);
     font-family: var(--reading-font);
     font-size: var(--size-0);
 }
@@ -152,7 +157,7 @@ chapter-nav {
 chapter-nav > nav {
     padding: var(--slight-padding);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
 }
 
 chapter-nav > h3 {
@@ -161,7 +166,7 @@ chapter-nav > h3 {
 }
 
 chapter-nav > nav > details {
-    border-radius: var(--section-radius);
+    border-radius: var(--normal-radius);
     border: 2px solid var(--surface-3);
 }
 
@@ -178,6 +183,15 @@ chapter-nav > nav > details > detail-anchor-wrapper {
     flex-flow: column wrap;
     padding: var(--normal-padding);
     padding-top: 0;
+}
+
+chapter-nav a {
+    padding: var(--slight-padding);
+}
+
+chapter-nav a:hover {
+    background-color: var(--surface-1);
+    border-radius: var(--normal-radius);
 }
 
 
