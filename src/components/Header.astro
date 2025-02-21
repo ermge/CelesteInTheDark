@@ -1,5 +1,16 @@
 <header>
     <logo-text><a href="/index.html">Celeste in the Dark</a></logo-text>
+    <menu-button>
+        <input type="checkbox" id="menuButton" name="menuButton">
+        <label for="menuButton">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 
+                    2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 
+                    2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                </path>
+            </svg>
+        </label>
+    </menu-button>
     <nav>
         <a href="/prologue.html">Prologue</a>
         <a href="/city.html" >Forsaken City</a>
@@ -12,3 +23,151 @@
     </nav>
     <hr>
 </header>
+
+<style>
+    header > nav > a {
+        padding: var(--slight-padding);
+        font-family: var(--heading-font);
+        font-size: var(--size-1);
+        color: var(--primary-3);
+        text-decoration: none;
+        align-self: center;
+    }
+
+    header > nav > a:hover {
+        background-color: var(--tonal-1);
+        color: var(--primary-1);
+        border-radius: var(--section-radius);
+    }
+
+
+    logo-text {
+        margin: var(--slight-margin);
+        margin-bottom: 0;
+        padding: var(--slight-padding);
+    }
+
+    logo-text > a {
+        color: var(--primary-1);
+        font-family: var(--heading-font);
+        font-size: var(--size-5);
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            background-color: var(--surface-0);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 10%;
+            grid-template-rows: 1fr;
+        }
+
+        logo-text > a {
+            font-size: var(--size-3);
+
+        }
+
+        header > nav {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            background-color: var(--surface-0);
+            z-index: 1; 
+        }
+
+        nav > a {
+            text-align: center;
+            pointer-events: none;
+        }
+
+        menu-button {
+            margin: var(--slight-margin);
+            margin-bottom: 0;
+            width: var(--size-3);
+            height: var(--size-3);
+            justify-self: center;
+            align-self: center;
+
+        }
+
+        input#menuButton {
+            display: none;
+        }
+
+        label[for=menuButton] > svg {
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            max-width: 100%;
+            fill: var(--primary-1);
+            transition: transform 0.2s ease-out;
+        }
+
+        menu-button:has(#menuButton:checked) ~ nav{
+            max-height: 100%;
+        }
+
+        menu-button:has(#menuButton:checked) ~ nav > a{
+            pointer-events: auto;
+        }
+
+        #menuButton:checked ~ label > svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        menu-button {
+            display: none;
+        }
+
+        header {
+            max-width: 100%;
+            display: flex;
+            flex-flow: column wrap; 
+            overflow: hidden;
+        }
+
+        header > nav {
+            width: 100%;
+            max-width: 100%;
+            padding: var(--normal-padding);
+            padding-top: 0; 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+    }
+
+    @media screen and (min-width: 1281px) {
+        menu-button {
+            display: none;
+        }
+
+        header {
+            max-width: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            overflow: hidden;
+        }
+
+        header > nav {
+            width: 100%;
+            max-width: 100%;
+            padding: var(--normal-padding);
+            padding-top: 0; 
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+</style>

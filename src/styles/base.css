@@ -55,65 +55,15 @@ img, picture, video, canvas, svg {
     max-height: 100%;
 }
 
+hr, br {
+    display: none;
+}
+
 body {
     background-color: var(--surface-0);
     font-family: var(--reading-font);
     font-size: var(--size-0);
     color: #f1f1f1;
-}
-
-header {
-    max-width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    overflow: hidden;
-
-}
-
-hr, br {
-    display: none;
-}
-
-header > nav {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--normal-padding);
-    padding-top: 0; 
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 0.5rem;
-}
-
-header > nav > a {
-    padding: var(--slight-padding);
-    font-family: var(--heading-font);
-    font-size: var(--size-1);
-    color: var(--primary-3);
-    text-decoration: none;
-}
-
-header > nav > a:hover {
-    background-color: var(--tonal-1);
-    color: var(--primary-1);
-    border-radius: var(--section-radius);
-}
-
-
-logo-text {
-    margin: var(--normal-margin);
-    margin-bottom: 0;
-    padding: var(--slight-padding);
-    padding-bottom: 0;
-    
-}
-
-logo-text > a {
-    color: var(--primary-1);
-    font-family: var(--heading-font);
-    font-size: var(--size-5);
-    text-decoration: none;
 }
 
 main {
