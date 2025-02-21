@@ -23,6 +23,7 @@
     --normal-padding: 1rem;
     --slight-margin: 0.5rem;
     --slight-padding: 0.5rem;
+    --large-margin: 2rem;
     --heading-font: Renogare, Arial, Helvetica, sans-serif;
     --reading-font: Merriweather, 'Times New Roman', Times, serif;
     --section-radius: 12px;
@@ -108,6 +109,7 @@ logo-text > a {
 }
 
 main {
+    padding: var(--slight-padding);
     max-width: 72.5rem;
     margin-inline: auto;
     display: flex;
@@ -120,7 +122,7 @@ hgroup {
     margin-bottom: var(--normal-margin);
     padding: var(--normal-padding);
     padding-top: 0;
-    border: var(--surface-3) 2px solid;
+    border: white 2px solid;
     border-radius: var(--section-radius);
 }
 
@@ -134,7 +136,7 @@ h1 {
 }
 
 section {
-    margin-bottom: var(--normal-margin);
+    margin-bottom: var(--large-margin);
     padding: var(--normal-padding);
     background-color: var(--surface-1);
     display: flex;
@@ -148,6 +150,7 @@ video {
     width: 90%;
     height: 100%;
     background-color: var(--surface-2);
+    margin-bottom: var(--slight-margin);
     padding: var(--slight-padding);
     object-fit: contain;
     object-position: 50% 50%;
@@ -167,6 +170,7 @@ h3 {
     margin-top: var(--slight-margin);
     margin-bottom: var(--slight-margin);
     font-family: var(--heading-font);
+    font-size: var(--size-2);
 }
 
 section > p {
@@ -181,6 +185,12 @@ main a {
     color: var(--primary-1);
 }
 
+chapter-nav {
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: var(--normal-margin);
+}
+
 chapter-nav > nav {
     padding: var(--slight-padding);
     display: grid;
@@ -190,6 +200,31 @@ chapter-nav > nav {
 chapter-nav > h3 {
     font-family: var(--heading-font);
     color: var(--primary-3) ;
+}
+
+chapter-nav > nav > details {
+    border-radius: var(--section-radius);
+    border: 2px solid var(--surface-3);
+}
+
+chapter-nav > nav > details > summary {
+    padding: var(--slight-padding);
+    font-family: var(--heading-font);
+    font-size: var(--size-1);
+    color: var(--primary-3);
+    user-select: none;
+}
+
+chapter-nav > nav > details > detail-anchor-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    padding: var(--normal-padding);
+    padding-top: 0;
+}
+
+
+details::marker {
+    color: var(--primary-1);
 }
 
 wip-text {
