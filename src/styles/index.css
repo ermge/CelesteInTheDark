@@ -51,7 +51,7 @@ body {
 }
 
 main {
-    max-width: 62.5rem;
+    max-width: 67.5rem;
     height: 100dvh;
     margin-inline: auto;
     display: flex;  
@@ -95,10 +95,16 @@ nav {
 
 a {  
     margin: var(--slight-margin);
-    padding: var(--slight-padding);
+    padding: var(--normal-padding);
     font-family: var(--heading-font);
     font-size: var(--size-1);
     text-align: center;
     color: white;
     text-decoration: none;
+}
+
+a:hover{
+    background-color: var(--tonal-1);
+    color: var(--primary-1);
+    border-radius: var(--section-radius);
 }

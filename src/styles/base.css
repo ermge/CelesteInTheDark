@@ -87,11 +87,19 @@ header > nav {
 }
 
 header > nav > a {
+    padding: var(--slight-padding);
     font-family: var(--heading-font);
     font-size: var(--size-1);
-    color: var(--primary-1);
+    color: var(--primary-3);
     text-decoration: none;
 }
+
+header > nav > a:hover {
+    background-color: var(--tonal-1);
+    color: var(--primary-1);
+    border-radius: var(--section-radius);
+}
+
 
 logo-text {
     margin: var(--normal-margin);
