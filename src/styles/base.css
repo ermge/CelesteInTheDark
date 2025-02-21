@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Renogare;
+    src: url(../assets/fonts/Renogare-Regular.otf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(../assets/fonts/Merriweather-Regular.ttf);
+}
+
+:root {
+    --surface-0: #121212;
+    --surface-1: #282828;
+    --surface-2: #3f3f3f;
+    --surface-3: #575757;
+    --primary-1:    #b6e7ff;
+    --primary-2: #c7ecff;
+    --primary-3: #e0f4ff;
+    --tonal-1: #202426;
+    --tonal-2: #4b4e50;
+    --normal-margin: 1rem;
+    --normal-padding: 1rem;
+    --slight-margin: 0.5rem;
+    --slight-padding: 0.5rem;
+    --heading-font: Renogare, Arial, Helvetica, sans-serif;
+    --reading-font: Merriweather, 'Times New Roman', Times, serif;
+    --section-radius: 12px;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --size--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --size--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --size-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --size-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --size-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --size-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --size-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --size-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: var(--surface-0);
+    font-family: var(--reading-font);
+    font-size: var(--size-0);
+    color: #f1f1f1;
+}
+
+header {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+
+}
+
+hr, br {
+    display: none;
+}
+
+header > nav {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--normal-padding);
+    padding-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+header > nav > a {
+    font-family: var(--heading-font);
+    font-size: var(--size-1);
+    color: var(--primary-1);
+    text-decoration: none;
+}
+
+logo-text {
+    margin: var(--normal-margin);
+    margin-bottom: 0;
+    padding: var(--slight-padding);
+    padding-bottom: 0;
+    
+}
+
+logo-text > a {
+    color: var(--primary-1);
+    font-family: var(--heading-font);
+    font-size: var(--size-5);
+    text-decoration: none;
+}
+
+main {
+    max-width: 72.5rem;
+    margin-inline: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+hgroup {
+    background-color: var(--surface-1);
+    margin-bottom: var(--normal-margin);
+    padding: var(--normal-padding);
+    padding-top: 0;
+    border: var(--surface-3) 2px solid;
+    border-radius: var(--section-radius);
+}
+
+h1 {
+    color: var(--primary-3);
+    font-family: var(--heading-font);
+    font-size: var(--size-4);
+    font-family: var(--heading-font); 
+}
+
+section {
+    margin-bottom: var(--normal-margin);
+    padding: var(--normal-padding);
+    background-color: var(--surface-1);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border: var(--surface-3) 2px solid;
+    border-radius: var(--section-radius);
+}
+
+video {
+    width: 90%;
+    height: 100%;
+    background-color: var(--surface-2);
+    padding: var(--slight-padding);
+    object-fit: contain;
+    object-position: 50% 50%;
+    border: var(--surface-2) 1px solid;
+    border-radius: var(--section-radius);
+}
+
+h2 {
+    margin-bottom: var(--slight-margin);
+    padding: var(--slight-padding);
+    font-family: var(--heading-font);
+    font-size: var(--size-3);
+}
+
+
+h3 {
+    margin-top: var(--slight-margin);
+    margin-bottom: var(--slight-margin);
+    font-family: var(--heading-font);
+}
+
+section > p {
+    width: 90%;
+    max-width: 100%;
+    padding-bottom: var(--normal-padding);
+    font-family: var(--reading-font);
+    font-size: var(--size-0);
+}
+
+main a {
+    color: var(--primary-1);
+}

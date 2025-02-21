@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Renogare;
+    src: url(../assets/fonts/Renogare-Regular.otf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(../assets/fonts/Merriweather-Regular.ttf);
+}
+
+:root {
+    --surface-0: #121212;
+    --surface-1: #282828;
+    --surface-2: #3f3f3f;
+    --surface-3: #575757;
+    --primary-1:    #b6e7ff;
+    --primary-2: #c7ecff;
+    --primary-3: #e0f4ff;
+    --tonal-1: #202426;
+    --tonal-2: #4b4e50;
+    --normal-margin: 1rem;
+    --normal-padding: 1rem;
+    --slight-margin: 0.5rem;
+    --slight-padding: 0.5rem;
+    --heading-font: Renogare, Arial, Helvetica, sans-serif;
+    --reading-font: Merriweather, 'Times New Roman', Times, serif;
+    --section-radius: 12px;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --size--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --size--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --size-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --size-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --size-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --size-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --size-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --size-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    max-width: 62.5rem;
+    height: 100dvh;
+    margin-inline: auto;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hgroup {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+}
+
+h1 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: var(--heading-font);
+    font-size: var(--size-5);
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-family: var(--heading-font);
+    font-size: var(--size-3);
+    text-align: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+a {  
+    margin: var(--slight-margin);
+    padding: var(--slight-padding);
+    font-family: var(--heading-font);
+    font-size: var(--size-1);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
