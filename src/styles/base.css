@@ -121,23 +121,29 @@ video {
 }
 
 h2 {
-    width: 95%;
-    margin-inline: auto;
-    margin-bottom: var(--slight-margin);
-    padding: var(--slight-padding);
     font-family: var(--heading-font);
     font-size: var(--size-3);
 }
 
+section > h2 {
+    width: 95%;
+    margin-inline: auto;
+    margin-bottom: var(--slight-margin);
+    padding: var(--slight-padding);
+}
+
 
 h3 {
+    padding: var(--slight-padding);
+    font-family: var(--heading-font);
+    font-size: var(--size-2);
+}
+
+section > h3 {
     width: 95%;
     margin-inline: auto;
     margin-top: var(--slight-margin);
     margin-bottom: var(--slight-margin);
-    padding: var(--slight-padding);
-    font-family: var(--heading-font);
-    font-size: var(--size-2);
 }
 
 section > p {
