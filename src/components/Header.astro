@@ -69,9 +69,9 @@
         }
 
         header-container {
-            display: grid;
-            grid-template-columns: 1fr 10%;
-            grid-template-rows: 1fr;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
         }
 
         logo-text > a {
@@ -88,6 +88,7 @@
             transition: max-height 0.2s ease-out;
             background-color: var(--surface-0);
             z-index: 1; 
+            gap: 0.3rem;
         }
 
         nav > a {
@@ -97,8 +98,9 @@
         menu-button {
             display: block;
             margin: var(--slight-margin);
-            width: var(--size-3);
-            height: var(--size-3);
+            padding: var(--slight-padding);
+            width: var(--size-5);
+            height: var(--size-5);
             justify-self: center;
             align-self: center;
 

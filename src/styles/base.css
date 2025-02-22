@@ -64,7 +64,6 @@ body {
     font-family: var(--reading-font);
     font-size: var(--size-0);
     color: #f1f1f1;
-    text-wrap-style: pretty;
 }
 
 main {
@@ -104,13 +103,12 @@ section {
     background-color: var(--surface-1);
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    border: var(--surface-3) 2px solid;
+    align-items: start;
     border-radius: var(--normal-radius);
 }
 
 video {
-    width: 90%;
+    width: 95%;
     height: 100%;
     background-color: var(--surface-2);
     margin-bottom: var(--slight-margin);
@@ -119,9 +117,12 @@ video {
     object-position: 50% 50%;
     border: var(--surface-2) 1px solid;
     border-radius: var(--normal-radius);
+    align-self: center;
 }
 
 h2 {
+    width: 95%;
+    margin-inline: auto;
     margin-bottom: var(--slight-margin);
     padding: var(--slight-padding);
     font-family: var(--heading-font);
@@ -130,16 +131,19 @@ h2 {
 
 
 h3 {
+    width: 95%;
+    margin-inline: auto;
     margin-top: var(--slight-margin);
     margin-bottom: var(--slight-margin);
+    padding: var(--slight-padding);
     font-family: var(--heading-font);
     font-size: var(--size-2);
 }
 
 section > p {
-    width: 90%;
-    max-width: 100%;
-    padding: var(--normal-padding);
+    width: 95%;
+    margin-inline: auto;
+    padding: var(--slight-padding);
     font-family: var(--reading-font);
     font-size: var(--size-0);
 }
@@ -205,4 +209,10 @@ wip-text {
     color: var(--error);
     justify-self: center;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    video, section > p, h2, h3 {
+        width: 100%;
+    }
 }
