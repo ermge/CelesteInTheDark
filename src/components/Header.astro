@@ -45,7 +45,9 @@
 
 
     logo-text {
+        max-width: 75%;
         margin: var(--slight-margin);
+        margin-right: 0;
         padding: var(--slight-padding);
     }
 
@@ -59,11 +61,24 @@
     menu-button {
         display: none;
     }
+    
+    
 
     @media screen and (max-width: 768px) {
+        @media screen and (max-height: 360px) {
+            header {
+                position: relative;
+            }
+        }
+
+        @media screen and (min-height: 361px) {
+            header {
+                position: sticky;
+            }
+        }
+
         header {
             background-color: var(--surface-0);
-            position: sticky;
             top: 0;
             z-index: 1;
         }
@@ -76,7 +91,6 @@
 
         logo-text > a {
             font-size: var(--size-3);
-
         }
 
         header > nav {
@@ -98,6 +112,7 @@
         menu-button {
             display: block;
             margin: var(--slight-margin);
+            margin-left: 0;
             padding: var(--slight-padding);
             width: var(--size-5);
             height: var(--size-5);

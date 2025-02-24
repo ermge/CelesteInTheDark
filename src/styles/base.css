@@ -60,6 +60,7 @@ hr, br {
 }
 
 body {
+    max-width: 100%;
     background-color: var(--surface-0);
     font-family: var(--reading-font);
     font-size: var(--size-0);
@@ -67,6 +68,7 @@ body {
 }
 
 main {
+    max-width: 100%;
     padding: var(--slight-padding);
     max-width: 72.5rem;
     margin-inline: auto;
@@ -98,6 +100,7 @@ h1 {
 }
 
 section {
+    max-width: 100%;
     margin-bottom: var(--large-margin);
     padding: var(--normal-padding);
     background-color: var(--surface-1);
@@ -110,6 +113,7 @@ section {
 video {
     width: 95%;
     height: 100%;
+    max-width: 100%;
     background-color: var(--surface-2);
     margin-bottom: var(--slight-margin);
     padding: var(--slight-padding);

@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Room1 from '../assets/videos/prologue/room1.mp4';
-import Room2 from '../assets/videos/prologue/room2.mp4';
-import Room3 from '../assets/videos/prologue/room3.mp4';
+import Room from '../components/Room.astro';
 import '../styles/base.css';
+const chapter = "prologue";
 ---
 
 <BaseLayout title="Prologue" icon="prologue">
@@ -29,37 +28,22 @@ import '../styles/base.css';
             </details>  
         </nav>
     </chapter-nav>
-    <section id="room_1_prologue">
-        <h2>Room 1</h2>
-        <video controls width="1280" height="720">
-            <source src={Room1}>
-        </video>
-        <h3>Strat Description</h3>
+    <Room title="Room 1" num="1" chapter={chapter}>
         <p>After the cutscene, hold up + right + grab. Time a full jump using the sound cue of the 5th note in the song. 
-            Time a full jump using the thud of the falling block.</p>
-    </section>
-    <section id="room_2_prologue">
-        <h2>Room 2</h2>
-        <video controls width="1280" height="720">
-            <source src={Room2}>
-        </video>
-        <h3>Strat Description</h3>
+        Time a full jump using the thud of the falling block.</p>
+    </Room>
+    <Room title="Room 2" num="2" chapter={chapter}>
         <p> Time a full jump using the sound cue of the 3rd beat of the falling tune to get over the gap. 
             You can time two full jumps with the song to get up the wall faster.
             Time a full jump using the whoosh from the bird to get over the gap. 
             You can time two more full jumps when the melody resumes to get up the walls faster.</p>
-    </section>
-    <section id="room_3_prologue">
-        <h2>Room 3 & 4</h2>
-        <video controls width="1280" height="720">
-            <source src={Room3}>
-        </video>
-        <h3>Strat Description</h3>
+    </Room>
+    <Room title="Rooms 3 & 4" num="3-4" chapter={chapter}>
         <p>Hearing no sound for a brief period indicates that you are in the transition. 
             You can safely do two full jumps to climb to the cutscene. 
             You can safely skip the cutscene when you hear the landing of your second jump. 
             Upon hearing the music shift, start beatcounting.
             Time jumps to the 6th and 13th beat. 
             You can safely skip the cutscene starting from the 15th beat.</p>
-    </section>
+    </Room>
 </BaseLayout>

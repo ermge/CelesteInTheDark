@@ -1,0 +1,15 @@
+---
+const {title, num, chapter} = Astro.props;
+const sectionID = "room_" + num + "_" + chapter;
+const videoSrc = "/src/assets/videos/" + chapter + "/room" + num + ".mp4"
+---
+
+<section id={sectionID}>
+    <h2>{title}</h2>
+    <video controls width="1280" height="720">
+        <source src={videoSrc}>
+        <img alt="Video is still a WIP" src="/src/assets/images/fallback.png">
+    </video>
+    <h3>Strat Description</h3>
+    <slot></slot>
+</section>
