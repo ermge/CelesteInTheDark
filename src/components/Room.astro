@@ -1,7 +1,7 @@
 ---
 const {title, num, chapter} = Astro.props;
 const sectionID = "room_" + num + "_" + chapter;
-const videoSrc = "src/assets/videos/" + chapter + "/room" + num + ".mp4"
+const videoSrc = "/assets/videos/" + chapter + "/room" + num + ".mp4"
 ---
 
 <section id={sectionID}>
