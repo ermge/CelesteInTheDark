@@ -1,8 +1,67 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Room from '../components/Room.astro';
 import '../styles/base.css';
+const chapter = "city";
 ---
 
-<BaseLayout title="Forsaken City">
-    <wip-text>Work in Progress!</wip-text>
+<BaseLayout title="Forsaken City" icon="city">
+    <hgroup>
+        <h1>Forsaken City</h1>
+        <p>Forsaken City is the first real introduction to playing Celeste without sight. It is much longer and more involved than Prologue but can still be beaten with
+            mostly normalized strats.
+        <p>
+            Expected completion time: 03:00-05:00
+        </p>
+        <p>
+            Difficulty: 1/5
+        </p>
+    </hgroup>
+    <chapter-nav>
+        <h3>Checkpoints</h3>
+        <nav>
+            <details>
+                <summary>Start</summary>
+                <detail-anchor-wrapper>
+                    <a href="#room_1_city">Room 1</a>
+                    <a href="#room_2_city">Room 2</a>
+                    <a href="#room_3_city">Room 3</a>
+                </detail-anchor-wrapper>
+            </details>  
+        </nav>
+    </chapter-nav>
+    <Room title="Room 1" num="1" chapter={chapter}>
+        <p>Upon landing, do 2 URD as fast as possible. 
+            On the second, hold grab and up to climb up the wall. Upon landing, do a hyper to the right and hold grab. 
+            Be sure to let go of down to not fall down. Upon landing, do a jump followed by a URD.
+        </p>
+    </Room>
+    <Room title="Room 2" num="2" chapter={chapter}>
+        <p>
+            In the transition, you can safely spam RD while holding grab to get to the spring. Climb up until you hit the spring.
+            Wait a brief period (~0.5s) before doing a RD. The timing window here is pretty big so you should not have too much trouble with this RD.
+            Upon landing, do a full jump and then a RD to get to wall. To get out, you can UD, followed by 3 full jumps. 
+        </p>
+    </Room>
+    <Room title="Room 3" num="3" chapter={chapter}>
+        <p>
+            In the transition, you can safely spam a URD to get to the second platform while holding grab. Hold up to climb up the wall.
+            Upon landing, do a hyper to get to the third platform while holding grab. Hold up to climb up the wall. Upon landing, do a URD
+            and climb out of the room.
+        </p>
+    </Room>
+    <Room title="Room 4" num="4" chapter={chapter}>
+        <p>
+            To reach the wall faster, you can time a UD followed by holding right and grab. A safer strat is to wait until you hear the wood landing sound before
+            doing a full jump, followed by a UD, followed by holding right and grab. Hold up to climb up the wall. 
+            Upon landing, do a ND to get on the moving platform. After the end of the sound cue of the moving platform, do a LUD while holding grab.
+            Climb up to get out of the room.
+        </p>
+    </Room>
+    <Room title="Room 5" num="5" chapter={chapter}>
+        <p>In the transition, you can safely spam DRD to lodge yourself into the corner. Climb up the platform. Upon landing, do a full jump, followed by a URD while holding grab.
+            Upon grabbing the wall, hold up until you hear no more sound cues. Do a neutral followed by holding right and grab (as you would in a normal any%). Hold up to climb up.
+            Upon landing, do a RD and UD to get out of the room.
+        </p>
+    </Room>
 </BaseLayout>
