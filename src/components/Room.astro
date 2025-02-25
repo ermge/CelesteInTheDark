@@ -4,7 +4,8 @@ const sectionID = "room_" + num + "_" + chapter;
 const videoSrc = "/assets/videos/" + chapter + "/room" + num + ".mp4"
 ---
 
-<section id={sectionID}>
+<a id={sectionID} class="offset-anchor"></a>
+<section>
     <h2>{title}</h2>
     <video controls width="1280" height="720">
         <source src={videoSrc}>
@@ -12,3 +13,24 @@ const videoSrc = "/assets/videos/" + chapter + "/room" + num + ".mp4"
     <h3>Strat Description</h3>
     <slot></slot>
 </section>
+
+<style>
+    @media screen and (max-width: 768px) {
+        .offset-anchor {
+            display: block;
+            height: 5rem;
+            margin-top: -5rem;
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .offset-anchor {
+            display: block;
+            height: 2rem;
+            margin-top: -2rem;
+            visibility: hidden;
+        }
+    }
+    
+</style>

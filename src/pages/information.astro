@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/base.css";
+---
+
+<BaseLayout title="Information">
+    <hgroup>
+        <h1>Information</h1>
+        <p>This page serves as a place to answer some FAQs and provide definitions for specific terms used throughout the site.</p>
+    </hgroup>
+    <hr>
+    <section id="faq">
+        <h2>FAQs</h2>
+        <h3>What is the purpose of this site?</h3>
+        <p>The main purpose of this site is to serve as a guide for beating Celeste without sight for both casual playthroughs or
+            blindfolded speedruns.
+        </p>
+    </section>
+    <section id="glossary">
+        <h2>Glossary</h2>
+        <dl>
+            <dt id="beat_counting">Beat Counsting</dt>
+            <dd>The timing of inputs to the beat of the background music</dd>
+
+            <dt id="normalization">Normalization</dt>
+            <dd>A series of inputs that always leads to the same results</dd>
+
+            <dt id="sound_cue">Sound/Music Cues</dt>
+            <dd>The usage of a specific sound to time an input or to determine the location of the player</dd>
+        </dl>       
+    </section>
+</BaseLayout>
+
+<style>
+    dl {
+        width: 95%;
+        max-width: 100%;
+        margin-inline: auto;
+        padding: var(--slight-padding);
+    }
+
+    dt {
+        font-family: var(--heading-font);
+        font-size: var(--size-1);
+        padding-bottom: var(--slight-padding);
+        padding-top: var(--slight-padding);
+    }
+
+    dd {
+        font-family: var(--reading-font);
+        font-size: var(--size-0);
+        padding-bottom: var(--slight-padding);
+    }
+</style>
