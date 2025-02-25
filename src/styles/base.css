@@ -181,6 +181,7 @@ chapter-nav > h3 {
 }
 
 chapter-nav > nav > details {
+    margin: var(--slight-margin);
     border-radius: var(--normal-radius);
     border: 2px solid var(--surface-3);
 }
